@@ -143,3 +143,139 @@ console.log(person);
 console.log(person["name"]); // Accessing the name property
 console.log(person.hobbies)
 console.log(person.hobbies[1]) // Accessing the second hobby
+
+// Functions
+// Functions are reusable blocks of code that perform a specific task. They can take parameters and return values.
+
+// Function declaration // we use the function keyword to declare a function
+
+function functionName() {
+    // code to be executed
+    return parameter; // returning the parameter
+}
+
+function funcWithParameters(parameter1, parameter2, parameter3) {
+    // code to be executed
+    return parameter1 + parameter2 + parameter3; // returning the sum of the parameters
+}
+
+// Working example of a function
+function returnSomeValue() {
+    let value = "This is my first function in JavaScript";
+
+    console.log(value);
+}
+
+ returnSomeValue(); //This is how you call a function to excute the code inside it
+
+ function returnParameter(parameter) {
+    return parameter;
+ }
+
+ //console.log(returnParameter("Hello, this is my second function in Javascript"));
+ const result = returnParameter("Hello, this is my second function in Javascript");
+ console.log(result);
+
+ function addNumbers(x,y) {
+     return x + y;
+ }
+ const sum = addNumbers(4, 5);
+ console.log(sum);
+
+
+//Assignment 1. Grading math scores, (An Array called scores containing objects with each object having a name and scoring)
+//loops help us to look through an Array and return a specific item
+
+let scores = [
+    {name: "Annet " , score: 85},
+    {name: "Justine " , score: 63},
+    {name: "Samuel " , score: 75},
+    {name: "Martin " , score: 57},
+    {name: "Resy " , score: 39},
+    {name: "Liz " , score: 95}
+]
+
+scores. forEach(student => {
+    let grade;
+
+    if (student.score >= 90) {
+        grade = "A"
+    } else if (student.score >= 80) {
+        grade = "B"
+    } else if (student.score >= 70) {
+        grade = "C"
+    } else if (student.score >= 60) {
+        grade = "D"
+    } else if (student.score >= 50) {
+        grade = "E"
+    } else if (student.score >= 40) {
+        grade = "F"
+    }
+
+    console.log(student.name + "And my grade is;" + grade)
+})
+
+
+
+    // if (score>=90) {console.log(scores.sore["D1"])}
+    // else if (scores >= 80) {console.log(scores.score["D2"])}
+    // else if (scores >= 70) {console.log(scores.score["C3"])}
+    // else if (scores >= 60) {console.log(scores.score["C4"])}
+    // else if (scores >= 50) {console.log(scores.score["E"])}
+    // else if (scores >= 40) {console.log(scores.score["F"])}
+
+
+    // Arrow Functions
+    // Arrow functions are a more concise way to write functions in JavaScript.
+    // They are often used for short, simple functions.
+
+    // Traditional function expression
+    const traditionalFunction = function() {
+        console.log("This is a traditional function");
+    }
+    traditionalFunction();
+
+    function anotherTraditionalFunction() {
+        console.log("This is another traditional function");
+    }
+    anotherTraditionalFunction();
+
+    // Arrow function expression
+    const arrowFunc = () => {
+        console.log("This is an arrow function");
+    }
+    arrowFunc();
+
+    const add = (a, b) => {
+        console.log(a + b);
+    }
+    add(3,4)
+
+    // JSON (JavaScript Object Notation)
+
+    // JavaScript Object
+    const task = {
+        id: 1,
+        title: "Complete JavaScript assignment",
+        completed: false
+    }
+    console.log(task);
+
+    // JSON string
+    const taskJSON = JSON.stringify(task);
+    console.log(taskJSON);
+
+    // Parsing JSON string back to JavaScript Object
+    const parsedTask = JSON.parse(taskJSON);
+    console.log(parsedTask);
+
+    // Local storage
+    // Storing data in local storage
+    localStorage.setItem("Name", "Kabiite Nabirah");
+
+    // Restriving data from local storage
+    const nameFromStorage = localStorage.getItem("Name");
+    console.log("Name from local storage: ", nameFromStorage);
+
+    const taskFromStorage = localStorage.getItem("task")
+    console.log(taskFromStorage);
